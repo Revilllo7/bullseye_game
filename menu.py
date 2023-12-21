@@ -43,6 +43,7 @@ def play():
                 sys.exit()
             if event.type == pygame.MOUSEBUTTONDOWN:
                 if play_back.input(play_mouse_position):
+                    pygame.display.set_caption("Menu")
                     main_menu()
 
         pygame.display.update()
@@ -72,6 +73,7 @@ def settings():
                 sys.exit()
             if event.type == pygame.MOUSEBUTTONDOWN:
                 if settings_back.input(settings_mouse_position):
+                    pygame.display.set_caption("Menu")
                     main_menu()
 
         pygame.display.update()
@@ -115,3 +117,4 @@ def main_menu():
 
 
 main_menu()
+
