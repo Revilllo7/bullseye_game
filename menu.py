@@ -44,6 +44,8 @@ def play():
                 if play_back.input(play_mouse_position):
                     main_menu()
 
+        pygame.display.update()
 
+        
 # Menu for settings
 # def options():
