@@ -20,7 +20,7 @@ class Button:
         screen.blit(self.text, self.text_rect)
 
     # checking for inputs
-    def input(self, position):                                    # !!!!
+    def input(self, position):
         if (position[0] in range(self.rect.left, self.rect.right) and
                 position[1] in range(self.rect.top, self.rect.bottom)):
             return True
@@ -28,7 +28,7 @@ class Button:
             return False
 
     # change color when hovered
-    def color_change(self, position):                           # !!!!
+    def color_change(self, position):
         if (position[0] in range(self.rect.left, self.rect.right) and
                 position[1] in range(self.rect.top, self.rect.bottom)):
             self.text = self.font.render(self.text_input, True, self.hover_color)
