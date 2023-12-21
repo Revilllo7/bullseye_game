@@ -9,9 +9,9 @@ Archery game that utilises the competitiveness of the sport and works as a way t
 
 
 TODO:
-- [ ] Make a MENU
+- [✅] Make a MENU
 - [ ] Add settings?
-- [ ] Add quit button
+- [✅] Add quit button
 - [ ] Create the game:
 - - [ ] Scoring system
 - - [ ] Arrow physics
