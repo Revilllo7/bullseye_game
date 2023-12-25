@@ -86,12 +86,12 @@ def main_menu():
 
         menu_text = get_font(100).render("MAIN MENU", True, "Red")
         menu_rect = menu_text.get_rect(center=(640, 150))
-        play_button = Button(image=pygame.image.load("assets/play_button.png"), pos=(640, 250), text_input="PLAY",
+        play_button = Button(image=pygame.image.load("assets/untitled_design.png"), pos=(640, 250), text_input="PLAY",
                              font=get_font(75), base_color="Red", hover_color="Blue")
-        settings_button = Button(image=pygame.image.load("assets/settings_button.png"), pos=(640, 400),
+        settings_button = Button(image=pygame.image.load("assets/untitled_design.png"), pos=(640, 400),
                                  text_input="SETTINGS",
                                  font=get_font(75), base_color="Red", hover_color="Blue")
-        quit_button = Button(image=pygame.image.load("assets/quit_button.png"), pos=(640, 550), text_input="QUIT",
+        quit_button = Button(image=pygame.image.load("assets/untitled_design.png"), pos=(640, 550), text_input="QUIT",
                              font=get_font(75), base_color="Red", hover_color="Blue")
 
         screen.blit(menu_text, menu_rect)
