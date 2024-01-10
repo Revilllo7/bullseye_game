@@ -12,8 +12,6 @@ pygame.display.set_caption("Menu")
 
 # ADD BACKGROUND HERE AFTER YOU MAKE IT
 background = pygame.image.load("assets/background.png")
-play_background = pygame.image.load
-settings_background = pygame.image.load
 
 
 def get_font(size):
@@ -29,11 +27,11 @@ def play():
         # illusion of changing the screen
         screen.blit(background, (0, 0))
 
-        play_back = Button(image=None, pos=(640, 490), text_input="BACK",
-                           font=get_font(75), base_color="White", hover_color="Red")
+        play_back = Button(image=pygame.image.load("assets/Button_border.png"), pos=(640, 490), text_input="BACK",
+                           font=get_font(60), base_color="White", hover_color="Red")
         play_back.color_change(play_mouse_position)
         play_back.update(screen)
-        play_game = Button(image=None, pos=(640, 330), text_input="START",
+        play_game = Button(image=pygame.image.load("assets/Button_border.png"), pos=(640, 330), text_input="START",
                            font=get_font(75), base_color="White", hover_color="Red")
         play_game.color_change(play_mouse_position)
         play_game.update(screen)
@@ -47,7 +45,7 @@ def play():
                     pygame.display.set_caption("Menu")
                     main_menu()
                 if play_game.input(play_mouse_position):
-                    pygame.display.set_caption("DZIAŁA")
+                    pygame.display.set_caption("WORKS")
 
         pygame.display.update()
 
@@ -61,14 +59,18 @@ def settings():
         # illusion of changing the screen
         screen.blit(background, (0, 0))
 
-        settings_text = get_font(45).render("this is the SETTINGS screen.", True, "White")
-        settings_rect = settings_text.get_rect(center=(640, 250))
-        screen.blit(settings_text, settings_rect)
-
-        settings_back = Button(image=None, pos=(640, 450), text_input="BACK", font=get_font(75), base_color="White",
+        settings_back = Button(image=pygame.image.load("assets/Button_border.png"),
+                               pos=(640, 490), text_input="BACK", font=get_font(75), base_color="White",
                                hover_color="Red")
         settings_back.color_change(settings_mouse_position)
         settings_back.update(screen)
+        settings_scoreboard = Button(image=pygame.image.load("assets/Button_border.png"),
+                                     pos=(640, 330), text_input="SCOREBOARD", font=get_font(45),
+                                     base_color="White", hover_color="Red")
+        settings_scoreboard.color_change(settings_mouse_position)
+        settings_scoreboard.update(screen)
+        if settings_scoreboard.input(settings_mouse_position):
+            pygame.display.set_caption("WORKS")
 
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
