@@ -12,9 +12,10 @@ pygame.display.set_caption("Menu")
 
 # ADD BACKGROUND HERE AFTER YOU MAKE IT
 background = pygame.image.load("assets/background.png")
+play_background = pygame.image.load
+settings_background = pygame.image.load
 
 
-# REMEMBER TO CHANGE FONT LATER
 def get_font(size):
     return pygame.font.Font("assets/font.ttf", size)
 
@@ -26,16 +27,16 @@ def play():
     while True:
         play_mouse_position = pygame.mouse.get_pos()
         # illusion of changing the screen
-        screen.fill("black")
+        screen.blit(background, (0, 0))
 
-        play_text = get_font(45).render("This is the PLAY screen.", True, "White")
-        play_rect = play_text.get_rect(center=(640, 250))
-        screen.blit(play_text, play_rect)
-
-        play_back = Button(image=None, pos=(640, 450), text_input="BACK",
+        play_back = Button(image=None, pos=(640, 490), text_input="BACK",
                            font=get_font(75), base_color="White", hover_color="Red")
         play_back.color_change(play_mouse_position)
         play_back.update(screen)
+        play_game = Button(image=None, pos=(640, 330), text_input="START",
+                           font=get_font(75), base_color="White", hover_color="Red")
+        play_game.color_change(play_mouse_position)
+        play_game.update(screen)
 
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
@@ -45,6 +46,8 @@ def play():
                 if play_back.input(play_mouse_position):
                     pygame.display.set_caption("Menu")
                     main_menu()
+                if play_game.input(play_mouse_position):
+                    pygame.display.set_caption("DZIAŁA")
 
         pygame.display.update()
 
@@ -56,7 +59,7 @@ def settings():
     while True:
         settings_mouse_position = pygame.mouse.get_pos()
         # illusion of changing the screen
-        screen.fill("black")
+        screen.blit(background, (0, 0))
 
         settings_text = get_font(45).render("this is the SETTINGS screen.", True, "White")
         settings_rect = settings_text.get_rect(center=(640, 250))
