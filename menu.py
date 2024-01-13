@@ -33,7 +33,6 @@ def play():
                     pygame.display.set_caption("Menu")
                     main_menu()
                 if play_game.input(play_mouse_position):
-                    pygame.display.set_caption("WORKS")
                     pygame.quit()
                     subprocess.run([sys.executable, "run.py"])
                     sys.exit()
@@ -52,8 +51,6 @@ def settings():
         settings_scoreboard = Button(image=pygame.image.load("assets/Button_border.png"), pos=(640, 330), text_input="SCOREBOARD", font=get_font(45), base_color="White", hover_color="Red")
         settings_scoreboard.color_change(settings_mouse_position)
         settings_scoreboard.update(screen)
-        if settings_scoreboard.input(settings_mouse_position):
-            pygame.display.set_caption("WORKS")
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 pygame.quit()
@@ -62,6 +59,10 @@ def settings():
                 if settings_back.input(settings_mouse_position):
                     pygame.display.set_caption("Menu")
                     main_menu()
+                if settings_scoreboard.input(settings_mouse_position):
+                    pygame.quit()
+                    subprocess.run([sys.executable, "scoreboard.py"])
+                    sys.exit()
         pygame.display.update()
 def main_menu():
     while True:
