@@ -1,6 +1,8 @@
 import pygame
 import sys
 from buttons import Button
+import subprocess
+
 pygame.init()
 res = (1280, 720)
 screen = pygame.display.set_mode(res)
@@ -32,6 +34,9 @@ def play():
                     main_menu()
                 if play_game.input(play_mouse_position):
                     pygame.display.set_caption("WORKS")
+                    pygame.quit()
+                    subprocess.run([sys.executable, "run.py"])
+                    sys.exit()
         pygame.display.update()
 def settings():
     pygame.display.set_caption("settings")
