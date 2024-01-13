@@ -1,16 +1,20 @@
 from player import *
-import syssas
+import sys
 
 
 pygame.init()
 
 # Set up the screen
-res = (1920, 1080)
+res = (1280, 720)
 screen = pygame.display.set_mode(res)
 pygame.display.set_caption("Bullseye_game")
 
+ground_color = (0, 255, 0)
+def draw_ground():
+    pygame.draw.line(screen, ground_color, (0, 100), (1280, 100))
+
 # Initialize the player
-player = Player(res[0], res[0])
+player = Player(res[0], res[1])
 
 # Set up clock for controlling the frame rate
 clock = pygame.time.Clock()
@@ -22,16 +26,14 @@ while True:
             pygame.quit()
             sys.exit()
 
-    # Get the keys that are currently being pressed
     keys = pygame.key.get_pressed()
-
-    # Move and draw the player
     player.move(keys)
+
     screen.fill((255, 255, 255))
     player.draw(screen)
 
-    # Update the display
-    pygame.display.flip()
+    if keys[pygame.K_q]:
+        player.shoot(screen)
 
-    # Cap the frame rate
+    pygame.display.flip()
     clock.tick(60)
