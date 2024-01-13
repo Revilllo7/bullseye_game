@@ -10,15 +10,19 @@ Archery game that utilises the competitiveness of the sport and works as a way t
 
 TODO:
 - [✅] Make a MENU
-- [ ] Add settings?
+- [✅ ] Add settings? (only hosts scoreboard)
 - [✅] Add quit button
 - [ ] Create the game:
 - - [ ] Scoring system
 - - [ ] Arrow physics
 - - [ ] Stamina/Hold bar (since holding a strung bow is tiresome)
 - - [ ] Timer
-- - [ ] Graphics
-- - [ ] X and Y axis shot
+- - [ ] Graphics:
+    - [✅] character 
+    - [ ] ground
+    - [ ] animations
+    - [ ] background
+- - [ ] X and Y axis shot (shot predictor exists, however it's baaad...)
 - - [ ] hit animations?
 
 
