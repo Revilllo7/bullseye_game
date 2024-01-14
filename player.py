@@ -47,7 +47,7 @@ class Player:
     def move(self, keys):
         speed = 5
 
-        if pygame.mouse.get_pressed()[2]:
+        if pygame.mouse.get_pressed()[0]:
             if not self.is_shooting:
                 self.is_shooting = True
                 self.update_arrow()
@@ -57,7 +57,7 @@ class Player:
                 self.shoot_arrow()
 
         if not self.is_shooting:
-            if keys[pygame.K_w] or keys[pygame.K_UP]:
+            if keys[pygame.K_w] or keys[pygame.K_UP] or keys[pygame.K_SPACE]:
                 if not self.is_jumping:
                     self.is_jumping = True
                     self.velocity_y = self.jump_height
@@ -71,8 +71,8 @@ class Player:
                     self.is_jumping = False
                     self.velocity_y = 0
 
-            if keys[pygame.K_s] or keys[pygame.K_DOWN]:
-                self.rect.y += speed if self.rect.y < self.screen.get_height() - self.size else 0  # Move down
+            # if keys[pygame.K_s] or keys[pygame.K_DOWN]:
+            #     self.rect.y += speed if self.rect.y < self.screen.get_height() - self.size else 0  # Move down
             if keys[pygame.K_a] or keys[pygame.K_LEFT]:
                 self.flip = True
                 self.direction = -1
