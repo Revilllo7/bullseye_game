@@ -13,13 +13,13 @@ class Player:
         self.jump_height = 10
         self.velocity_y = 0
         self.gravity = 1
-        self.is_jumping = False
+        self.is_jumping = True
 
         self.direction = 1
         self.flip = False
 
         self.arrow_size = (25, 10)
-        self.arrow_color = (0, 0, 0)
+        self.arrow_color = (255, 255, 255)
         self.arrow_start_pos = None
         self.arrow_end_pos = None
         self.is_shooting = False
