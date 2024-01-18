@@ -8,8 +8,12 @@ res = (1280, 720)
 screen = pygame.display.set_mode(res)
 pygame.display.set_caption("Menu")
 background = pygame.image.load("assets/background.png")
+
+
 def get_font(size):
     return pygame.font.Font("assets/font.ttf", size)
+
+
 def play():
     pygame.display.set_caption("Play Game")
     while True:
@@ -37,6 +41,8 @@ def play():
                     subprocess.run([sys.executable, "run.py"])
                     sys.exit()
         pygame.display.update()
+
+
 def settings():
     pygame.display.set_caption("settings")
     while True:
@@ -64,6 +70,8 @@ def settings():
                     subprocess.run([sys.executable, "scoreboard.py"])
                     sys.exit()
         pygame.display.update()
+
+
 def main_menu():
     while True:
         screen.blit(background, (0, 0))

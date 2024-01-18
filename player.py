@@ -73,6 +73,7 @@ class Player:
 
             # if keys[pygame.K_s] or keys[pygame.K_DOWN]:
             #     self.rect.y += speed if self.rect.y < self.screen.get_height() - self.size else 0  # Move down
+            # Nie ma już możliwości chodzenia w dół, ale kod zostawiam sobie na przyszłość
             if keys[pygame.K_a] or keys[pygame.K_LEFT]:
                 self.flip = True
                 self.direction = -1
