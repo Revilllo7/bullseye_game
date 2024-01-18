@@ -10,19 +10,19 @@ Archery game that utilises the competitiveness of the sport and works as a way t
 
 TODO:
 - [✅] Make a MENU
-- [✅ ] Add settings? (only hosts scoreboard)
+- [✅] Add settings? (only hosts scoreboard)
 - [✅] Add quit button
 - [ ] Create the game:
-- - [ ] Scoring system
-- - [ ] Arrow physics
-- - [ ] Stamina/Hold bar (since holding a strung bow is tiresome)
-- - [ ] Timer
+- - [✅] Scoring system
+- - [✅] Arrow physics
+- - [abandoned] Stamina/Hold bar (since holding a strung bow is tiresome)
+- - [✅] Timer
 - - [ ] Graphics:
     - [✅] character 
-    - [ ] ground
-    - [ ] animations
+    - [✅] ground
+    - [abandoned] animations
     - [ ] background
-- - [ ] X and Y axis shot (shot predictor exists, however it's baaad...)
+- - [abandoned] X and Y axis shot (shot predictor exists, however it's baaad...)
 - - [ ] hit animations?
 
 
@@ -49,4 +49,36 @@ Captain log:
 13. Scoreboard looks for scores.txt file and prints them out correctly sorting as it goes
 14. Added background image for the menu. play and settings sections have their special backgrouns, alongside scoreboards.
 15. Added player collision with walls
-16. 
+16. Added hitboxes for player to hit
+17. Added points
+18. Added Timer
+19. Timer with 0 seconds ends game
+20. Added number of hits
+21. Added user name inputs
+22. Added scoring.py which saves the data into a file
+
+
+### KRYTERIA
+1 . podział projektu na pliki (2pkt)
+✅ – mam podział na 7 plików, które importują z siebie dane i przesyłają sobie funkcje
+
+2.  własne funkcje + testy 5 pkt (po 1 pkt za funkcję i test do niej)
+Mam setki własnych funkcji, brak testów
+
+3 użycie list, krotek, słowników (1,5 pkt)
+Używam list, używam słowników
+
+4. lista  najwyżej punktowanych odbytych gier (wraz z imieniem/nazwą gracza).(1pkt)
+✅ – scores.txt
+
+5 odczyt i zapis do pliku (1 pkt)
+✅ – Scoring.py zapisuje do pliku, scoreboard odczytuje
+
+6. algorytm  (np sortowanie) (2 pkt)
+? – scoreboard ma swój algorytm na sortowanie
+
+7. kompletność rozwiązania (2,5 pkt)
+Całość jest grywalna
+
+8. akademicki poziom (5 pkt)
+Pygame.
