@@ -1,5 +1,7 @@
 import pygame
 import os
+import subprocess
+import sys
 from buttons import Button
 
 class Scoring:
@@ -44,15 +46,15 @@ class Scoring:
                         active = False
                     color = color_active if active else color_inactive
 
-                    if save_button.input(event.pos):
+                    if save_button.input(event.pos) or (event.type == pygame.KEYDOWN and event.key == pygame.K_RETURN):
                         self.save_score(text)
-                        running = False
+                        pygame.quit()
+                        subprocess.run([sys.executable, "scoreboard.py"])
+                        sys.exit()
+
                 if event.type == pygame.KEYDOWN:
                     if active:
-                        if event.key == pygame.K_RETURN:
-                            self.save_score(text)
-                            running = False
-                        elif event.key == pygame.K_BACKSPACE:
+                        if event.key == pygame.K_BACKSPACE:
                             text = text[:-1]
                         else:
                             text += event.unicode
