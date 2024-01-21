@@ -6,16 +6,24 @@ from buttons import Button
 
 class Scoring:
     def __init__(self):
+        self.player_data = {}
         self.hits = int(os.environ.get('HITS', 0))
         self.points = int(os.environ.get('POINTS', 0))
 
     def save_score(self, user_name):
+        player_data = {
+            'user_name': user_name,
+            'hits': self.hits,
+            'points': self.points
+        }
+        self.player_data[user_name] = player_data
+
         try:
             with open('scores.txt', 'a') as file:
-                file.write(f"{user_name},{self.hits},{self.points}\n")
+                file.write(f"{player_data}\n")
         except FileNotFoundError:
             with open('scores.txt', 'w') as file:
-                file.write(f"{user_name},{self.hits},{self.points}\n")
+                file.write(f"{player_data}\n")
 
     def display_score(self):
         pygame.init()
