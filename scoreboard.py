@@ -9,19 +9,31 @@ pygame.init()
 def read_scores(filename="scores.txt"):
     if os.path.isfile(filename):
         with open(filename, "r") as file:
-            scores = [line.strip().split(",") for line in file]
+            # Use eval to convert the string representation of the dictionary to an actual dictionary
+            scores = [eval(line.strip()) for line in file]
         return scores
     else:
         print("ERROR: file doesn't exist, create one!")
         return []
 
+def bubble_sort(scores):
+    n = len(scores)
+
+    for i in range(n - 1):
+        for j in range(0, n - i - 1):
+            if scores[j]['points'] < scores[j + 1]['points']:
+                scores[j], scores[j + 1] = scores[j + 1], scores[j]
 
 def display_scores(screen, font):
     scores = read_scores()
+    bubble_sort(scores)
 
     y_offset = 150
     for rank, score in enumerate(scores, start=1):
-        player, hits, points = score
+        player = score['user_name']
+        hits = str(score['hits'])
+        points = str(score['points'])
+
         rank_text = font.render(str(rank), True, (255, 255, 255))
         player_text = font.render(player, True, (255, 255, 255))
         time_text = font.render(hits, True, (255, 255, 255))
