@@ -9,8 +9,16 @@ and works as a way to see who can get more points in a set amount of time**
 
 
 ![Bullseye](/assets/Bullseye.png)
+```
 
-todo
+
+
+
+
+
+```
+
+### todo
 
 - [✅] Make a MENU
 - [✅] Add settings? (only hosts scoreboard)
@@ -28,9 +36,16 @@ todo
 - - [abandoned] X and Y axis shot (shot predictor exists, however it's baaad...)
 - - [abandoned] hit animations?
 
+```
 
 
-Captain log: a list of all the things implemented
+
+
+
+
+```
+
+### Captain log: a list of all the things implemented
 1. created a repo, made a run.py file, got the pygame lib
 2. created a menu that changes displays between: "start game", "settings", "quit"
 3. created buttons file that is responsible for: initialising buttons, updating buttons, detecting inputs, changing color on hover for visual clarity.
@@ -59,7 +74,13 @@ Captain log: a list of all the things implemented
 they are being used out of context
 26. Adding logos, fixing up the README. tidying up
 
+```
 
+
+
+
+
+```
 
 
 ### KRYTERIA oceny
