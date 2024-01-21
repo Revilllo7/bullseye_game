@@ -8,9 +8,10 @@ Archery game that utilises the competitiveness of the sport
 and works as a way to see who can get more points in a set amount of time**
 
 
-![Bullseye](/assets/bullseye.png)
+![Bullseye](/assets/Bullseye.png)
 
 <details><summary>todo</summary>
+```
 - [✅] Make a MENU
 - [✅] Add settings? (only hosts scoreboard)
 - [✅] Add quit button
@@ -26,10 +27,12 @@ and works as a way to see who can get more points in a set amount of time**
     - [❌] background
 - - [abandoned] X and Y axis shot (shot predictor exists, however it's baaad...)
 - - [abandoned] hit animations?
+```
 </details>:
 
 
 <details><summary>Captain log: a list of all the things implemented</summary>
+```
 1. created a repo, made a run.py file, got the pygame lib
 2. created a menu that changes displays between: "start game", "settings", "quit"
 3. created buttons file that is responsible for: initialising buttons, updating buttons, detecting inputs, changing color on hover for visual clarity.
@@ -57,6 +60,7 @@ and works as a way to see who can get more points in a set amount of time**
 25. Added the player_test file with all the tests used while making the game, however running them in that file will cause errors, cause
 they are being used out of context
 26. Adding logos, fixing up the README. tidying up
+```
 </details>
 
 
