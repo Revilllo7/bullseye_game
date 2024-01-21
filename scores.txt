@@ -1,4 +1,2 @@
-Oliver,58,179
-test,24,77
-Test10,24,68
-test2,11,28
+{'user_name': 'Oliver', 'hits': 64, 'points': 164}
+{'user_name': 'BG', 'hits': 34, 'points': 90}
